@@ -52,7 +52,7 @@ function encripta(){
     //encriptando
     else {
         ouput = input.value;
-        let help;
+        let help = "";
         for (const clave in remplazo) {
             let valor = remplazo[clave];
             console.log(valor + ` - ` + clave);
@@ -60,8 +60,10 @@ function encripta(){
                 let letra = ouput[i];
                 console.log(letra);
                 if(letra === clave){
-                    ouput = ouput.replace(new RegExp(clave, "g"), valor);
-                    console.log("es igual");
+                    help += valor;
+                    console.log(`es igual: ` + help);
+                } else {
+                    help += letra;
                 }
             }
 
