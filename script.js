@@ -52,25 +52,24 @@ function encripta(){
     //encriptando
     else {
         ouput = input.value;
-        let help = "";
-        for (const clave in remplazo) {
-            let valor = remplazo[clave];
-            console.log(valor + ` - ` + clave);
-            for (let i = 0; i < ouput.length; i++) {
-                let letra = ouput[i];
-                console.log(letra);
+        let encontrado = false;
+        let acumulador = "";
+        for (let i = 0; i < ouput.length; i++) {
+            let letra = ouput[i];
+            encontrado = false;
+            for (const clave in remplazo) {                
+                let valor = remplazo[clave];
                 if(letra === clave){
-                    help += valor;
-                    console.log(`es igual: ` + help);
-                } else {
-                    help += letra;
+                    encontrado = valor;
                 }
             }
-
-            // if(ouput.indexOf(clave) !== -1){
-            //     ouput = ouput.replace(new RegExp(clave, "g"), valor);
-            // }
+            if (encontrado === false){
+                acumulador += letra;                
+            } else{
+                acumulador += encontrado;
+            }
         }
+        ouput = acumulador;
         copiaShow.style.opacity = "1";
         ouputShow.style.opacity = "1";
         ouputShow.innerHTML = ouput
