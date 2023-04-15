@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(237, 250, 210);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+#cabecera{
+    position: absolute;
+    top: 58px;
+    left: 40px;
+}
+main{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+    text-align: center;
+    overflow: hidden;
+}
+#contenido1, #contenido2{
+    display: inline-block;
+    vertical-align: middle;
+}
+#contenido1{
+    margin: 50px 0;
+}
+#input{
+    box-sizing: border-box;
+    width: 70vw;
+    height: 600px;
+    padding: 0 50px;
+}
+#texto{
+    resize: none;
+    box-sizing: border-box;
+    background-color: transparent;    
+    font-size: 20px;
+    width: 100%;
+    height: 500px;
+
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+button {  
+    background-color: #101560fb;
+    border: 1px solid rgba(27, 31, 35, 0.915);
+    border-radius: 20px;
+    color: #fffffb;
+    cursor: pointer;
+    float: center;
+    width: 40%;
+    line-height: 40px;
+}
+button:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+button:hover {
+    background-color: #323aaefb;
+}
+button:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+}
+button:active {
+    background-color: #6169cefb;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+#contenido2{
+    border-radius: 20px;
+    background-color: rgba(196, 226, 133, 0.488);
+    padding: 20px 0;
+}
+#output{
+    box-sizing: border-box;
+    width: 340px;
+    height: 582px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#resultado, #copia{
+    opacity: 0;
+}
